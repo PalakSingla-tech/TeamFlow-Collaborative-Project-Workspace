@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: CollaborativeProjectWorkspace
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:${DATABASE_URL:${DB_URL:jdbc:postgresql://localhost:5432/teamflow_db}}}
+    username: ${SPRING_DATASOURCE_USERNAME:${DB_USERNAME:postgres}}
+    password: ${SPRING_DATASOURCE_PASSWORD:${DB_PASSWORD:}}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+server:
+  port: ${PORT:8081}
+
+jwt:
+  secretKey: ${JWT_SECRET:${JWT_SECRET_KEY:}}
