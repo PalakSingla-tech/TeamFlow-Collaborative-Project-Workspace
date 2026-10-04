@@ -1,0 +1,13 @@
+frontend/**/* linguist-vendored
+
+*.json linguist-generated
+*.html linguist-documentation
+*.md linguist-documentation
+package-lock.json linguist-generated
+pnpm-lock.yaml linguist-generated
+
+* text=auto
+*.java text eol=lf
+*.tsx text eol=lf
+*.ts text eol=lf
+*.css text eol=lf
